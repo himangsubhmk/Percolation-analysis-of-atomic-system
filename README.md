@@ -35,4 +35,16 @@ To identify if Smax percolates or not,
  --- One cluster will be detected.
  
  While doing so, we can mark the atom with some identity. Next scan for next atom, if it is not marked start from (1.) to find the next cluster and so on.
+
+  @Program : cluster.c
+   @Note    : Find cluster of active atom for plastic event
+   @Note    : Atom less than 2.06A (first minima of gr) => same cluster
+
+   The code uses cell list to compute neighbour so it is fast code.
+   We need to provide position of the atom and some other per-particle property based on which we define the particle is plastically mobile or not(we use here D2min for that)--- see the file reading section for that.
+   
+
+
+
+ 
  
